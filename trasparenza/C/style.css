@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #156b15; /* Colore blu governativo */
+    background-color: #007A52; /* Colore blu governativo */
     color: #fff;
     padding: 20px;
 }
@@ -34,7 +34,7 @@ main {
 }
 
 footer {
-    background-color: #156b15;
+    background-color: #007A52;
     color: #fff;
     text-align: center;
     padding: 10px;

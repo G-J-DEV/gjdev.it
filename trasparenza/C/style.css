@@ -26,7 +26,7 @@ nav ul li a {
 }
 
 #logo {
-    max-width: 100px; /* Larghezza massima del logo */
+    max-width: 10px; /* Larghezza massima del logo */
     height: auto; /* Altezza automatica rispetto alla larghezza */
 }
 

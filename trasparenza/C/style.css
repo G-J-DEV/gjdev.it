@@ -1,13 +1,9 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 header {
     background-color: #007A52; /* Colore blu governativo */
     color: #fff;
     padding: 20px;
+    display: flex;
+    align-items: center; /* Centrare verticalmente */
 }
 
 header h1 {
@@ -29,6 +25,19 @@ nav ul li a {
     text-decoration: none;
 }
 
+#logo {
+    max-width: 100px; /* Larghezza massima del logo */
+    height: auto; /* Altezza automatica rispetto alla larghezza */
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 main {
     padding: 20px;
 }

@@ -9,21 +9,22 @@ header {
 header h1 {
     margin: 0;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin-left: auto; /* Sposta i link verso destra */
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-left: 20px; /* Aggiungi spazio tra i link */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
 
 #logo {
     max-width: 100px; /* Larghezza massima del logo */

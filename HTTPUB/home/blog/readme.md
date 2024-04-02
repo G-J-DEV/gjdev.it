@@ -1,1 +1,0 @@
-#blog Gabriel Jones

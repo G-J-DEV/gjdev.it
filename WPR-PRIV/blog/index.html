@@ -162,6 +162,17 @@
 </div>
 
 
+<div class="video-container" oncontextmenu="return false;">
+  <video controls>
+    <source src="video/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay">
+    <h2>Benvenuti al mio sito web</h2>
+    <p>Guarda il nostro video</p>
+    <button onclick="playVideo()">Play</button>
+  </div>
+</div>
 
 
 
@@ -169,18 +180,14 @@
   </div>
 </div>
 <div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <script>
+    function playVideo() {
+      var video = document.querySelector('video');
+      if (video.paused) {
+        video.play();
+        document.querySelector('.video-overlay').style.display = 'none';
+      }
+    }
+  </script>
   </body>
 </html>

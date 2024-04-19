@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #login-form {
+            margin-top: 50px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-form">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="error-message"></p>
+    </div>
+
+    <div id="content" class="hidden">
+        <h1>Welcome to My Page</h1>
+        <p>Contenuto della pagina</p>
+        <!-- Qui inserisci il resto del contenuto della pagina -->
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Esempio di credenziali hard-coded, sostituiscili con un sistema di autenticazione reale
+            if (username === "admin" && password === " ") {
+                document.getElementById("login-form").classList.add("hidden");
+                document.getElementById("content").classList.remove("hidden");
+            } else {
+                document.getElementById("error-message").innerText = "Invalid username or password";
+            }
+        }
+    </script>
+</body>
+</html>

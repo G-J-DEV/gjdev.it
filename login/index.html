@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github OAuth Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Github OAuth Authentication</h1>
+        <button class="login-btn" onclick="authenticateWithGitHub()">Login with GitHub</button>
+    </div>
+
+    <script>
+        function authenticateWithGitHub() {
+            // Redirect user to GitHub for authentication
+            window.location.href = 'https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI';
+        }
+    </script>
+</body>
+</html>

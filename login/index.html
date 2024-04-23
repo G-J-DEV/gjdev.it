@@ -4,7 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github OAuth Authentication</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        h1 {
+            color: #24292e;
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .login-btn {
+            background-color: #24292e;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            outline: none;
+        }
+        
+        .login-btn:hover {
+            background-color: #0366d6;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,7 +59,7 @@
     <script>
         function authenticateWithGitHub() {
             // Redirect user to GitHub for authentication
-            window.location.href = 'https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI';
+            window.location.href = 'https://github.com/login/oauth/authorize?client_id=Iv1.57b730c6df216a98&redirect_uri=http://gjdev.it/';
         }
     </script>
 </body>

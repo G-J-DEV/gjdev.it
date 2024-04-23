@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il mio Sito Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Benvenuto nel mio Sito Web</h1>
+        <div class="circle" onclick="toggleSidebar(event)"></div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chi Sono</a></li>
+            <li><a href="#">Contatti</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Sezione Principale</h2>
+            <p>Benvenuti nel mio sito web! Qui potete trovare informazioni su di me e sui miei progetti.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Il mio Sito Web</p>
+    </footer>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("currentYear").innerText = new Date().getFullYear();
+
+        function toggleSidebar(event) {
+            event.stopPropagation();
+            const sidebar = document.getElementById("sidebar");
+            const body = document.querySelector("body");
+            const isOpen = sidebar.style.right === "0px";
+            if (isOpen) {
+                sidebar.style.right = "-250px";
+            } else {
+                sidebar.style.right = "0";
+                body.addEventListener("click", closeSidebarOnce);
+            }
+        }
+
+        function closeSidebarOnce() {
+            const sidebar = document.getElementById("sidebar");
+            const body = document.querySelector("body");
+            sidebar.style.right = "-250px";
+            body.removeEventListener("click", closeSidebarOnce);
+        }
+    </script>
+</body>
+</html>

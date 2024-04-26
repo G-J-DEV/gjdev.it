@@ -1,0 +1,30 @@
+# Informazioni sulla società
+societa:
+  nome: Delizie Delizie
+  descrizione: Benvenuti a Delizie Delizie, dove creiamo esperienze culinarie indimenticabili per i nostri clienti. Dai matrimoni ai pranzi aziendali, offriamo piatti deliziosi e un servizio impeccabile.
+
+# Menu del catering
+menu:
+  - nome: Antipasti
+    piatti:
+      - nome: Bruschette miste
+        descrizione: Bruschette con pomodoro fresco, basilico e aglio
+        prezzo: $5
+      - nome: Assortimento di formaggi
+        descrizione: Selezione di formaggi italiani con marmellata di fichi
+        prezzo: $8
+
+  - nome: Primi piatti
+    piatti:
+      - nome: Risotto ai funghi porcini
+        descrizione: Risotto cremoso con funghi porcini freschi
+        prezzo: $12
+      - nome: Pasta al pesto
+        descrizione: Linguine con pesto fresco, pomodori ciliegia e pinoli
+        prezzo: $10
+
+# Informazioni di contatto
+contatti:
+  indirizzo: Via delle Delizie, 123 - 00123 Città dei Sapori
+  telefono: "+39 0123 456789"
+  email: info@deliziedelizie.it

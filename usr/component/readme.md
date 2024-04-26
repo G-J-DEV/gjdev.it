@@ -62,5 +62,5 @@ header h1 {
 https://gabbystudios.github.io/Pagina-Globale/
 https://github.com/gabbystudios 
 
-In rispetto dell'articolo 66 del C4l
+In rispetto dell'articolo 66 del C4i
 - 

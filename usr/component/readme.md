@@ -1,5 +1,6 @@
 ## GJDEV COMPONENTS
 - Global header
+-  Parte html
 ```html
 <div class="miur-bar">
     <div>
@@ -10,7 +11,11 @@
     </div>
 </div>
 ```markdown
-  # Css
+
+
+# Css
+-  Parte css
+
 ```css
 .miur-bar {
     background-color: #21215c;

@@ -21,3 +21,8 @@ lua & CS
 
 ## Badges
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
+
+<script async src="https://cse.google.com/cse.js?cx=46d6a8f01bebe4f94">
+</script>
+<div class="gcse-search"></div>

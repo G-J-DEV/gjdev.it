@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.I.C. - Department of Information Coding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dt7ExMBaL+98Jr4WVQJ3DlxZ6x2p1xtqp70zUj8PT6Lq4vBkoZFDUAPj7wtDp9K38OT8K0Ym6WS+I7VGPONLIw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/da/Casa_de_Am%C3%A9rica_%28Madrid%29_01.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .service {
+            flex: 1;
+            max-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .service i {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .service h3 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #666;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            
+            header nav ul {
+                justify-content: space-between;
+            }
+
+            header nav ul li {
+                margin: 0;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+
+            .service {
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>D.I.C.</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="about">
+        <div class="container">
+            <h2>About D.I.C.</h2>
+            <p>The Department of Information Coding (D.I.C.) is dedicated to excellence in ensuring the security, efficiency, and innovation of information coding at a national level.</p>
+        </div>
+    </section>
+<section id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Technology Security</h3>
+                <p>At D.I.C., we specialize in technology security, offering comprehensive solutions to protect sensitive data and critical infrastructure from cyber threats. Our team of cybersecurity experts employs state-of-the-art techniques and protocols to ensure the highest level of protection for your organization.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-code"></i>
+                <h3>Code Enforcement</h3>
+                <p>Ensuring the integrity and quality of software code is paramount in today's digital landscape. At D.I.C., we enforce strict coding standards and best practices to maintain the reliability and security of software applications. Our team of experienced developers conducts thorough code reviews and audits to identify and address vulnerabilities, ensuring the robustness of your software systems.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-search"></i>
+                <h3>Application Research</h3>
+                <p>Researching and developing cutting-edge applications to meet the evolving needs of the nation is a core focus at D.I.C. Our team of researchers and developers collaborates closely with government agencies and industry partners to identify emerging trends and technologies, driving innovation in application development. Whether it's developing custom software solutions or leveraging existing platforms, we are committed to delivering results that exceed expectations.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Data Science</h3>
+                <p>Unlocking the potential of data is essential for informed decision-making and strategic planning. At D.I.C., our data science team specializes in leveraging advanced analytics and machine learning techniques to extract insights and drive actionable intelligence. From predictive modeling to trend analysis, we help organizations harness the power of data to achieve their goals and objectives.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-check-circle"></i>
+                <h3>Quality Assurance</h3>
+                <p>Ensuring the highest quality and reliability of software applications through rigorous testing and evaluation is a cornerstone of our approach at D.I.C. Our quality assurance team employs industry-leading testing methodologies and tools to validate the functionality and performance of software systems. From unit testing to end-to-end testing, we leave no stone unturned in our quest to deliver flawless software solutions that exceed user expectations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 D.I.C. - Department of Information Coding. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

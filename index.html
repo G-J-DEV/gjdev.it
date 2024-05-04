@@ -1,5 +1,19 @@
-<!DOCTYPE html>
+
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +23,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            color: #fff; /* Testo bianco */
+            color: #fff; /* White text */
         }
         .container {
             width: 80%;
@@ -54,7 +68,7 @@
         }
 
         .column {
-            width: 33.33%; /* Tre colonne su schermi grandi */
+            width: 33.33%; /* Three columns on large screens */
             padding: 0 10px;
         }
 
@@ -64,6 +78,11 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
         }
 
         article h2 {
@@ -94,6 +113,11 @@
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        footer:hover {
+            background-color: #1c1f22;
         }
         
         .top-bar a {
@@ -101,6 +125,7 @@
           text-decoration: none;
           margin: 0 10px;
           font-size: 16px;
+          transition: color 0.3s ease;
         }
         
         .top-bar a:hover {
@@ -123,7 +148,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: #24292e; /* Colore uguale all'header */
+          background-color: #24292e; /* Same color as header */
           z-index: 999;
           display: none;
         }
@@ -132,9 +157,9 @@
           position: fixed;
           top: 0;
           left: 0;
-          width: 100%; /* Modifica per occupare l'intera larghezza */
-          height: 100%; /* Modifica per occupare l'intera altezza */
-          background-color: #24292e; /* Colore uguale all'header */
+          width: 100%; /* Modify to occupy full width */
+          height: 100%; /* Modify to occupy full height */
+          background-color: #24292e; /* Same color as header */
           overflow-y: auto;
         }
         
@@ -144,113 +169,113 @@
           right: 20px;
           cursor: pointer;
         }
-        
-        @media screen and (max-width: 768px) {
-          .main-content {
-            display: block; /* Una colonna su schermi piccoli */
-          }
-          .column {
-            width: 100%;
-            padding: 0;
-          }
+
+        /* Added "corpo" class for black text */
+        .corpo {
+            color: #000; /* Black text */
+        }
+
+        /* Style for About Me section */
+        .about-me {
+            display: flex;
+            align-items: center;
+        }
+
+        .about-me-content {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .about-me img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* CSS to set background color of table cells */
+        table td {
+            background-color: #fff; /* White background */
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 
 <body>
-  <div class="top-bar">
-    <a class="logo" href="https://gjdev.it/">gjdev.it</a>
-    <div>
-      <a href="index.html">Home</a>
-
-        
-
+    <div class="top-bar">
+        <a class="logo" href="#">onlysiteme</a>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#" class="slidebar-toggle">Open Slidebar</a>
+        </div>
     </div>
-  </div>
 
-  <div class="slidebar" id="slidebar">
-    <div class="slidebar-content">
-      <!-- Contenuto della slidebar qui -->
-      <h2>Contenuto slidebar</h2>
-      <p>Esempio di contenuto</p>
+    <div class="slidebar" id="slidebar">
+        <div class="slidebar-content">
+            <!-- Slidebar content here -->
+            <h2>Slidebar Content</h2>
+            <p>Example content</p>
+        </div>
+        <span class="slidebar-close">X</span>
     </div>
-    <span class="slidebar-close">X</span>
-  </div>
-  
-  <header>
-    <div class="container">
-      <h1>gjdev</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="blog.html">blog</a></li>
-          <li><a href="amministrazione.html">amministrazione</a></li>
-          <li><a href="https://gabbystudios.github.io/Pagina-Globale">Pagina Globale</a></li>
-          <li><a href="admin.html">admin</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <section class="main-content">
-    <div class="container">
-      <div class="column">
-        <article>
-          <h2>Column 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu enim convallis consequat. Morbi accumsan sapien sit amet lectus bibendum, non tempus metus dapibus.</p>
-          <a href="#" class="read-more">Read more</a>
-        </article>
-      </div>
-      <div class="column">
-        <article>
-          <h2>Column 2</h2>
-          <p>Phasellus vel odio eu quam condimentum fringilla. Curabitur ac sapien eu orci rutrum sagittis. Nam in quam vestibulum, volutpat sem nec, ultrices magna.</p>
-          <a href="#" class="read-more">Read more</a>
-        </article>
-      </div>
-      <div class="column">
-        <article>
-          <h2>Column 3</h2>
-          <p>Vestibulum sed metus vel nisi convallis viverra. Fusce lacinia semper arcu nec rutrum. Pellentesque et metus id urna lacinia sodales.</p>
-          <a href="#" class="read-more">Read more</a>
-        </article>
-      </div>
-    </div>
-  </section>
+    <header>
+        <div class="container">
+            <h1>United Security of Developers</h1>
+            <h4>gjdev</h4>
+            <nav>
+                <ul>
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="blog.html">blog</a></li>
+                  <li><a href="amministrazione.html">amministrazione</a></li>
+                  <li><a href="https://gabbystudios.github.io/Pagina-Globale">Pagina Globale</a></li>
+                  <li><a href="admin.html">admin</a></li>
+                </ul>
+              </nav>
+        </div>
+    </header>
 
-<script async src="https://cse.google.com/cse.js?cx=46d6a8f01bebe4f94">
-</script>
-<div class="gcse-search"></div>
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Gabriel Jones. All rights reserved.</p>
-      <li><a href="admin.html">Vai alla pagina di amministrazione</a></li>
-      <li><a href="https://dev-gabriel-jones.pantheonsite.io/">Vai al sito globale</a></li>
-    </div>
-  </footer>
+    <section class="main-content corpo">
+        <div class="container">
+                <h2>About me</h2>
+                <p></p>
+                <h2>What is?</h2>
+                <p></p>
+                <h2>Services</h2>
+                <p></p>
+                <h2>Found Your Services</h2>
+                <p></p>
+        </div>
+    </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const slidebar = document.querySelector(".slidebar");
-      const slidebarContent = document.querySelector(".slidebar-content");
-      const slidebarClose = document.querySelector(".slidebar-close");
-      const slidebarToggle = document.querySelector(".slidebar-toggle");
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gabriel Jones. All rights reserved. <a href="admin.html">Go to the admin page</a> | <a href="https://dev-gabriel-jones.pantheonsite.io/">Go to the global site</a></p>
+        </div>
+    </footer>
 
-      slidebarToggle.addEventListener("click", function() {
-        slidebar.style.display = "block";
-      });
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slidebar = document.querySelector(".slidebar");
+            const slidebarContent = document.querySelector(".slidebar-content");
+            const slidebarClose = document.querySelector(".slidebar-close");
+            const slidebarToggle = document.querySelector(".slidebar-toggle");
 
-      slidebarClose.addEventListener("click", function() {
-        slidebar.style.display = "none";
-      });
+            slidebarToggle.addEventListener("click", function() {
+                slidebar.style.display = "block";
+            });
 
-      slidebar.addEventListener("click", function(event) {
-        if (event.target === slidebar) {
-          slidebar.style.display = "none";
-        }
-      });
-    });
-  </script>
+            slidebarClose.addEventListener("click", function() {
+                slidebar.style.display = "none";
+            });
+
+            slidebar.addEventListener("click", function(event) {
+                if (event.target === slidebar) {
+                    slidebar.style.display = "none";
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
+

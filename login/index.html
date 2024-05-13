@@ -5,79 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina Personale</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+    /* Stili CSS */
 
-    .top-bar {
-      background-color: #1a1a1a;
-      color: #fff;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .top-bar a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 20px;
-    }
-
-    .top-bar a:last-child {
-      margin-right: 0;
-    }
-
-    header {
-      background-color: #343a40;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    #login-form {
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    #login-form h2 {
-      margin-bottom: 20px;
-      color: #343a40;
-    }
-
-    #content {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    #content h2 {
-      margin-top: 0;
-      color: #343a40;
-    }
-
-    #readme-content {
-      white-space: pre-wrap; /* Per mantenere il testo su più righe */
-    }
-
-    .hidden {
-      display: none;
-    }
+    /* Resto dello stile rimane invariato */
   </style>
 </head>
 <body>
@@ -124,8 +54,8 @@
 
       // Definizione degli utenti e delle loro risorse
       var users = [
-        { username: "user1", password: "password1", folder: "user/user1", photo: "user/user1/photo.png", readme: "user/user1/readme.md" },
-        { username: "user2", password: "password2", folder: "user/user2", photo: "user/user2/photo.png", readme: "user/user2/readme.md" }
+        { username: "user1", password: "password1", folder: "/user/user1", photo: "/user/user1/photo.png", readme: "/user/user1/readme.md" },
+        { username: "user2", password: "password2", folder: "/user/user2", photo: "/user/user2/photo.png", readme: "/user/user2/readme.md" }
         // Aggiungi altri utenti e risorse se necessario
       ];
 

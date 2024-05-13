@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Personale</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .top-bar a:last-child {
+      margin-right: 0;
+    }
+
+    header {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    #login-form {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #login-form h2 {
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+
+    #content {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #content h2 {
+      margin-top: 0;
+      color: #343a40;
+    }
+
+    #readme-content {
+      white-space: pre-wrap; /* Per mantenere il testo su più righe */
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar con nome del sito e link -->
+  <div class="top-bar">
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Account</a>
+    </div>
+    <div>
+      <span>Nome del Sito</span>
+    </div>
+  </div>
+
+  <!-- Header con foto dell'utente -->
+  <header>
+    <h1>Dashboard Personale</h1>
+    <img id="user-photo" src="" alt="Foto Utente">
+  </header>
+
+  <!-- Form di login -->
+  <div id="login-form">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error-message"></p>
+  </div>
+
+  <!-- Contenuto riservato all'utente -->
+  <div id="content" class="hidden">
+    <!-- Inserisci qui le risorse specifiche dell'utente -->
+    <h2 id="readme-title"></h2>
+    <div id="readme-content"></div>
+  </div>
+
+  <!-- Script per la visualizzazione del contenuto del file Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Definizione degli utenti e delle loro risorse
+      var users = [
+        { username: "user1", password: "password1", folder: "user/user1", photo: "user/user1/photo.png", readme: "user/user1/readme.md" },
+        { username: "user2", password: "password2", folder: "user/user2", photo: "user/user2/photo.png", readme: "user/user2/readme.md" }
+        // Aggiungi altri utenti e risorse se necessario
+      ];
+
+      // Verifica le credenziali dell'utente
+      var user = users.find(function(user) {
+        return user.username === username && user.password === password;
+      });
+
+      if (user) {
+        // Mostra il contenuto e imposta la foto dell'utente nell'header
+        document.getElementById("login-form").classList.add("hidden");
+        document.getElementById("content").classList.remove("hidden");
+        document.getElementById("user-photo").src = user.photo;
+
+        // Carica il contenuto del file readme dell'utente
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("readme-title").textContent = "Benvenuto, " + user.username + "!";
+            document.getElementById("readme-content").innerHTML = marked(this.responseText);
+          }
+        };
+        xhttp.open("GET", user.readme, true);
+        xhttp.send();
+      } else {
+        // Messaggio di errore per credenziali non valide
+        document.getElementById("error-message").innerText = "Nome utente o password non validi";
+      }
+    }
+  </script>
+</body>
+</html>

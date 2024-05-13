@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina Personale</title>
   <style>
+            header {
+            background-color: #2c3e50; /* Blu scuro */
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin-right: 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
     body {
       margin: 0;
       padding: 0;
@@ -82,23 +108,22 @@
 </head>
 <body>
   <!-- Top bar con nome del sito e link -->
-  <div class="top-bar">
-    <div>
-      <a href="#">Home</a>
-      <a href="#">Account</a>
-    </div>
-    <div>
-      <span>Nome del Sito</span>
-    </div>
-  </div>
 
-  <!-- Header con foto dell'utente -->
-  <header>
-    <h1>Dashboard Personale</h1>
-    <img id="user-photo" src="" alt="Foto Utente">
-  </header>
+  
+      <header>
+        <div class="container">
+            <h1><img src="https://github.com/GitJuneCode/Gabriel-Jones/blob/SSA/x/archiviati/Logo-ufficiale.png?raw=true" alt="Logo"> Benvenuto sul Sito di Gabriel Jones</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://gjdev.it">Home</a></li>
+                    <li><a href="Portali.html">Portali</a></li>
+                    <li><a href="dev/index.html">Dev-Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Form di login -->
+<!-- Form di login -->
   <div id="login-form">
     <h2>Login</h2>
     <input type="text" id="username" placeholder="Username">

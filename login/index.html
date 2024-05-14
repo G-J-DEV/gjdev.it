@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina Personale</title>
+  <title>Pagina</title>
   <style>
             header img {
             max-width: 100px;
@@ -176,22 +176,24 @@
         return user.username === username && user.password === password;
       });
 
-      if (user) {
-        // Mostra il contenuto e imposta la foto dell'utente nell'header
-        document.getElementById("login-form").classList.add("hidden");
-        document.getElementById("content").classList.remove("hidden");
-        document.getElementById("user-photo").src = user.photo;
+if (user) {
+    // Mostra il contenuto e imposta la foto dell'utente nell'header
+    document.getElementById("login-form").classList.add("hidden");
+    document.getElementById("content").classList.remove("hidden");
+    document.getElementById("user-photo").src = user.photo; // Imposta l'immagine dell'utente
 
-        // Carica il contenuto del file readme dell'utente
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
+    // Carica il contenuto del file readme dell'utente
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
             document.getElementById("readme-title").textContent = "Benvenuto, " + user.username + "!";
             document.getElementById("readme-content").innerHTML = marked(this.responseText);
-          }
-        };
-        xhttp.open("GET", user.readme, true);
-        xhttp.send();
+        }
+    };
+    // Imposta il percorso del file readme dell'utente
+    xhttp.open("GET", "https://gabbystudios.github.io/usr/user1", true);
+    xhttp.send();
+}
       } else {
         // Messaggio di errore per credenziali non valide
         document.getElementById("error-message").innerText = "Nome utente o password non validi";

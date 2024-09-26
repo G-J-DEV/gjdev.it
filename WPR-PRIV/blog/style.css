@@ -18,3 +18,45 @@
         .miur-bar a:hover {
             text-decoration: underline;
         }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+          }
+        
+          .video-container {
+            position: relative;
+            width: 100%;
+          }
+        
+          .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Opacità regolabile */
+            color: white; /* Colore del testo */
+            text-align: center; /* Posizionamento del testo */
+            padding: 20px; /* Spaziatura interna */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        
+          .video-overlay h2 {
+            margin-bottom: 10px;
+          }
+        
+          .video-overlay p {
+            margin-bottom: 20px;
+          }
+        
+          .video-overlay button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
